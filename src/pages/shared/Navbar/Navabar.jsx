@@ -57,7 +57,7 @@ const Navbar = () => {
                 <Link to="/" className="normal-case text-xl">
                     <img className="navbar-logo" src='https://i.ibb.co/LPgPs2g/logo-removebg-preview.png' alt="" />
                 </Link>
-                <h3 className="navbar-title">Sportify</h3>
+                <h3 className="navbar-title text-orange-600">Sportify</h3>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -66,7 +66,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user?.photoURL ? <img style={{ width: '50px', marginRight: "15px", borderRadius: '50%' }} src={user.photoURL} alt="" /> : <></>
+                    user?.photoURL ? <img style={{ width: '50px', marginRight: "15px", borderRadius: '50%' }} src={user.photoURL} className="tooltip" data-tip={user.name} alt="" /> : <></>
 
                 }
             </div>
