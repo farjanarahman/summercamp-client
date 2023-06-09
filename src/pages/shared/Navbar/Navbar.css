@@ -1,10 +1,13 @@
 .navbar-logo {
-    width: 50px; 
+    width: 200px; 
     height: auto; 
+    margin-right: 0;
+    padding: 0;
   }
   .navbar-title {
-    color: #005aae; 
+    color: #ec7c12; 
     font-size: 1.5rem; 
     font-weight: bold; 
+    margin-left: 0;
   }
   

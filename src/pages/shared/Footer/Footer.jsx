@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
             <div>
-                <img className="logo mx-auto" src="https://i.ibb.co/T2Kf6SY/charley-countdown-2.png" alt="" />
-                <p className='title'>RoboPlayground</p>
+                <img className="logo mx-auto" src="https://i.ibb.co/LPgPs2g/logo-removebg-preview.png" alt="" />
+                <p className='title'>Sportify</p>
             </div>
             <div>
                 <span className="footer-title">About Us</span>
