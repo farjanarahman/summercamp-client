@@ -3,4 +3,36 @@
     height: auto;
     max-height: 150px; /* Adjust the value as needed */
   }
+  /* .carousel .carousel-slide .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+   */
+   .carousel-caption {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .carousel-title {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-description {
+    color: #ffffff;
+    font-size: 16px;
+  }
   
