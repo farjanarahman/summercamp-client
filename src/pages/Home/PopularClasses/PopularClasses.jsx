@@ -12,9 +12,9 @@
 
 
 import { useEffect, useState } from 'react';
-import CardClass from '../Home/CardClass';
+import ClassCard from './ClassCard';
 
-const Classes = () => {
+const PopularClasses = () => {
 
     const [classes, setClasses] = useState([]);
 
@@ -30,10 +30,10 @@ const Classes = () => {
             <div className="divider"></div> 
             <div className='grid md:grid-cols-3 gap-4'>
                 {
-                    classes.map(data => <CardClass 
+                    classes.map(data => <ClassCard 
                         key={data._id}
                         data={data}
-                        ></CardClass>)
+                        ></ClassCard>)
                 }
             </div>
             {/* // <p>Fine-art photography</p>
@@ -47,4 +47,4 @@ const Classes = () => {
     );
 };
 
-export default Classes;
+export default PopularClasses;
