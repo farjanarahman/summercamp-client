@@ -1,16 +1,3 @@
-// import React from 'react';
-
-// const PopularClasses = () => {
-//     return (
-//         <div>
-//             <h2 className='font-bold text-center mt-5'>Popular Classes</h2>
-//         </div>
-//     );
-// };
-
-// export default PopularClasses;
-
-
 import { useEffect, useState } from 'react';
 import ClassCard from './ClassCard';
 

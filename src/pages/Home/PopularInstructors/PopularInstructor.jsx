@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import InsCard from '../Home/InsCard';
+import InstructorCard from './InstructorCard';
 
 const PopularInstructor = () => {
     const [instructors, setInstructors] = useState([]);
@@ -16,10 +16,10 @@ const PopularInstructor = () => {
             <div className="divider"></div>
             <div className='grid md:grid-cols-2 gap-5 mt-8'>
                 {
-                    instructors.map(instructor => <InsCard 
+                    instructors.map(instructor => <InstructorCard 
                         key={instructor._id}
                         instructor={instructor}
-                        ></InsCard>)
+                        ></InstructorCard>)
                 }
             </div>
         </div>

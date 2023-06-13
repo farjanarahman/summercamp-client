@@ -5,8 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { router } from './routes/routes';
-import AuthProvider from './providers/AuthProvider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import AuthProvider from './providers/AuthProvider';
 
 const queryClient = new QueryClient()
 
