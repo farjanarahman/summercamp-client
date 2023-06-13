@@ -3,13 +3,11 @@ import { useContext } from "react";
 import Swal from 'sweetalert2';
 import { useNavigate, useLocation } from 'react-router-dom';
 import useCart from '../../../hooks/useCart';
-// import useCart from '../../hooks/useCart';
-
 
 const ClassCard = ({ data }) => {
     const { _id, image, name, Ins_name, available_seats, price } = data;
     const { user } = useContext(AuthContext);
-    const [, refetch] = useCart();
+    const [ refetch] = useCart();
     const navigate = useNavigate();
     const location = useLocation();
 

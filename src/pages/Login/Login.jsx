@@ -5,7 +5,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
-import app from '../../firebase/firebase.config';
+import { app } from '../../firebase/firebase.config';
 
 const LoginForm = () => {
   const { signIn } = useContext(AuthContext);

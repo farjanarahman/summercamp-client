@@ -3,9 +3,9 @@ import useTitle from '../../hooks/useTitle';
 import { AuthContext } from '../../providers/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import app from '../../firebase/firebase.config';
 import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
+import { app } from '../../firebase/firebase.config';
 
 const RegisterForm = () => {
   useTitle('Register');
