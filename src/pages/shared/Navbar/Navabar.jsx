@@ -19,16 +19,16 @@ const Navbar = () => {
 
     const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
 
-    const handleToggle = (e) =>{
-        if(e.target.checked) {
+    const handleToggle = (e) => {
+        if (e.target.checked) {
             setTheme('dark');
         }
-        else{
+        else {
             setTheme('light');
         }
     }
 
-    useEffect(() =>{
+    useEffect(() => {
         localStorage.setItem('theme', theme);
         const localTheme = localStorage.getItem('theme');
         document.querySelector('html').setAttribute('data-theme', localTheme);
@@ -85,10 +85,10 @@ const Navbar = () => {
                 <label className="swap swap-rotate mx-3">
 
                     {/* this hidden checkbox controls the state */}
-                    <input 
-                    type="checkbox" 
-                    onChange={handleToggle} 
-                    checked={theme === 'light' ? false : true}
+                    <input
+                        type="checkbox"
+                        onChange={handleToggle}
+                        checked={theme === 'light' ? false : true}
                     />
 
                     {/* sun icon */}

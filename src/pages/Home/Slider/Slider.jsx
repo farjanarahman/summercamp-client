@@ -20,7 +20,7 @@
 //                 <div>
 //                     <img src="https://i.ibb.co/rZC3ckY/badminton.jpg"/>
 //                 </div>
-                
+
 //             </Carousel>
 //     );
 // };
@@ -82,84 +82,6 @@
 
 
 
-// import React from 'react';
-// import 'react-responsive-carousel/lib/styles/carousel.min.css';
-// import { Carousel } from 'react-responsive-carousel';
-
-// const Slider = () => {
-//   return (
-//     <div className="carousel-container" style={{ height: '200px' }}>
-//       <Carousel>
-//         <div>
-//           <img
-//             src="https://i.ibb.co/vkYgw4N/football.jpg"
-//             alt="Football"
-//             className="carousel-image"
-//           />
-//         </div>
-//         <div>
-//           <img
-//             src="https://i.ibb.co/tHhjy3J/running.png"
-//             alt="Running"
-//             className="carousel-image"
-//           />
-//         </div>
-//         <div>
-//           <img
-//             src="https://i.ibb.co/7gZXh0R/basketball.jpg"
-//             alt="Basketball"
-//             className="carousel-image"
-//           />
-//         </div>
-//         <div>
-//           <img
-//             src="https://i.ibb.co/3BrfZXv/basketball2.jpg"
-//             alt="Basketball"
-//             className="carousel-image"
-//           />
-//         </div>
-//         <div>
-//           <img
-//             src="https://i.ibb.co/rZC3ckY/badminton.jpg"
-//             alt="Badminton"
-//             className="carousel-image"
-//           />
-//         </div>
-//       </Carousel>
-//     </div>
-//   );
-// };
-
-// export default Slider;
-
-// import React from 'react';
-// import 'react-responsive-carousel/lib/styles/carousel.min.css';
-// import { Carousel } from 'react-responsive-carousel';
-
-// const Slider = () => {
-//   return (
-//     <div className="banner-container">
-//       <div className="banner-overlay">
-//         <h1 className="banner-title">Website Name</h1>
-//         <p className="banner-description">Welcome to our website. Learn more about us.</p>
-//       </div>
-//       <Carousel className="carousel-container">
-//         <div>
-//           <img src="https://i.ibb.co/vkYgw4N/football.jpg" alt="Football" className="carousel-image" />
-//         </div>
-//         <div>
-//           <img src="https://i.ibb.co/tHhjy3J/running.png" alt="Running" className="carousel-image" />
-//         </div>
-//         {/* Add more carousel slides/images as needed */}
-//       </Carousel>
-//     </div>
-//   );
-// };
-
-// export default Slider;
-
-
-import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import './Slider.css'
@@ -168,21 +90,51 @@ const Slider = () => {
   return (
     <div className="top-slider">
       <Carousel className="carousel-container">
-        <div>
+        <div className="image-overlay">
           <img src="https://i.ibb.co/vkYgw4N/football.jpg" alt="Football" className="carousel-image" />
-          <div className="carousel-caption">
-            <h2 className="carousel-title">Welcome to Our Website</h2>
-            <p className="carousel-description">Discover the latest news and updates</p>
+          <div className="overlay">
+            <h2 className="carousel-title font-extrabold text-4xl">Welcome to <br /> <span className='text-orange-600 font-extrabold'>Sportify</span></h2>
+            <p className='mt-5 w-3/5 font-medium'>Sportify is a renowned sports academy dedicated to nurturing young talent and promoting sports excellence.</p>
           </div>
         </div>
+
         <div>
           <img src="https://i.ibb.co/tHhjy3J/running.png" alt="Running" className="carousel-image" />
-          <div className="carousel-caption">
-            <h2 className="carousel-title">Experience the Thrill of Running</h2>
-            <p className="carousel-description">Join us for exciting running events</p>
-          </div>
+          {/* <div className="carousel-caption">
+            <p className="carousel-description font-medium px-3 text-black">Experience the Thrill of Running</p>
+          </div> */}
         </div>
-        {/* Add more carousel slides/images with captions as needed */}
+        <div>
+          <img
+            src="https://i.ibb.co/7gZXh0R/basketball.jpg"
+            alt="Basketball"
+            className="carousel-image"
+          />
+          {/* <div className="carousel-caption">
+            <p className="carousel-description font-medium px-3 text-black">Unleash your potential and redefine athletic excellence</p>
+          </div> */}
+        </div>
+        <div>
+          <img
+            src="https://i.ibb.co/rZC3ckY/badminton.jpg"
+            alt="Badminton"
+            className="carousel-image"
+          />
+          {/* <div className="carousel-caption">
+            <p className="carousel-description font-medium px-3 text-black">Sportify provides the ideal platform for growth, teamwork, and a lifelong love for sports.</p>
+          </div> */}
+        </div>
+        <div>
+          <img
+            src="https://i.ibb.co/3BrfZXv/basketball2.jpg"
+            alt="Basketball"
+            className="carousel-image"
+          />
+          {/* <div className="carousel-caption">
+            <p className="carousel-description font-medium px-3 text-black">Sportify provides the ideal platform for growth, teamwork, and a lifelong love for sports.</p>
+          </div> */}
+        </div>
+        
       </Carousel>
     </div>
   );
