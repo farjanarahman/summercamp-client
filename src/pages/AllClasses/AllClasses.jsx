@@ -12,7 +12,7 @@ const AllClasses = () => {
     const { data: allClassData = [], refetch } = useQuery(
         ["classes"],
         async () => {
-            const res = await axios.get("http://localhost:5000/classes");
+            const res = await axios.get("https://sportify-neon.vercel.app//classes");
             return res.data;
         }
     );
@@ -21,7 +21,7 @@ const AllClasses = () => {
     const approveHandler = (id) => {
         console.log(id)
         axios
-            .patch(`http://localhost:5000/class/approve/${id}`)
+            .patch(`https://sportify-neon.vercel.app//class/approve/${id}`)
             .then((response) => {
                 if (response.status === 200) {
 
@@ -41,7 +41,7 @@ const AllClasses = () => {
     const denyHandler = (id) => {
         console.log(id)
         axios
-            .patch(`http://localhost:5000/class/deny/${id}`)
+            .patch(`https://sportify-neon.vercel.app//class/deny/${id}`)
             .then((response) => {
                 if (response.status === 200) {
 
@@ -61,7 +61,7 @@ const AllClasses = () => {
     const onChangeHandler=()=>{
         //console.log(textAreaValue);
         const info={feedback:textAreaValue}
-        fetch(`http://localhost:5000/feedback/${feedback}`,{
+        fetch(`https://sportify-neon.vercel.app//feedback/${feedback}`,{
             method: 'PUT',
             headers:{
                 'content-type':'application/json'

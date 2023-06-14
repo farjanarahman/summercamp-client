@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const PopularClasses2 = () => {
     const [popularClass, setPopularClass] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/popularClasses')
+        fetch('https://sportify-neon.vercel.app//popularClasses')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

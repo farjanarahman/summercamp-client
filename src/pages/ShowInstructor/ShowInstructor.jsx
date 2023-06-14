@@ -4,7 +4,7 @@ import InstructorCard from '../InstructorCard/InstructorCard';
 const ShowInstructor = () => {
     const [instructor,setInstructor] =useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/usersrole')
+        fetch('https://sportify-neon.vercel.app//usersrole')
         .then(res=>res.json())
         .then(data=>{
             console.log(data)

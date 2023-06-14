@@ -8,16 +8,19 @@ import RegisterForm from "../pages/Register/Register";
 import Main from "../layout/Main";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import PrivateRoute from '../routes/PrivateRoute'
-import Dashboard from "../Layout/Dashboard";
-import UHome from '../Layout/UHome'
 import AdminRoute from '../routes/AdminRoute'
-import AllUsers from "../pages/Dashboard/AllUsers";
-import ManageClass from "../pages/Dashboard/ManageClass";
-import AddClass from '../pages/Dashboard/Instructor/AddClass'
-import MyClass from "../pages/Dashboard/Instructor/MyClass";
-import UpdateClass from "../pages/Dashboard/Instructor/UpdateClass";
-import MyCourse from "../pages/Dashboard/MyCourse";
-import Payment from "../pages/Dashboard/Payment";
+import MyClass from '../pages/MyClass/MyClass'
+import UpdateClass from '../pages/UpdateClass/UpdateClass'
+import Payment from '../pages/Payment/Payment';
+import Classes from '../pages/Classes/Classes';
+import ShowInstructor from '../pages/ShowInstructor/ShowInstructor';
+import Class from '../pages/Class/Class';
+import SelectItem from '../pages/SelectItem/SelectItem';
+import AllClasses from '../pages/AllClasses/AllClasses';
+import UsersAction from '../pages/UsersAction';
+import PopularInstructor from "../pages/Home/PopularInstructors/PopularInstructor";
+import NewClass from '../pages/NewClass/NewClass'
+import Dashboard from '../Layout/Dashboard';
 
   
 export  const router = createBrowserRouter([
@@ -43,13 +46,13 @@ export  const router = createBrowserRouter([
           element: <Classes></Classes>
         },
         {
-          path:"/instructor",
+          path:"/instructors",
           element: <ShowInstructor></ShowInstructor>
         },
         {
           path: 'singleclass/:id',
-          element: <SingleClass></SingleClass>,
-          loader: ({params})=>fetch(`http://localhost:5000/classes/${params.id}`)
+          element: <Class></Class>,
+          loader: ({params})=>fetch(`https://sportify-neon.vercel.app//classes/${params.id}`)
         },
         
       ]
@@ -57,11 +60,11 @@ export  const router = createBrowserRouter([
     
     {
       path: "/dashboard",
-      element: <DashBoard></DashBoard>,
+      element: <Dashboard></Dashboard>,
       children:[
         {
           path: "/dashboard/instructor",
-          element: <Instructor></Instructor>
+          element: <PopularInstructor></PopularInstructor>
         },
         {
           path: "/dashboard/class",
@@ -81,8 +84,8 @@ export  const router = createBrowserRouter([
         },
         {
           path: "/dashboard/updateclass/:id",
-          element: <UpdateMyClass></UpdateMyClass>,
-          //loader: ({params})=>fetch(`http://localhost:5000/singleclass/${params.id}`)
+          element: <UpdateClass></UpdateClass>,
+          //loader: ({params})=>fetch(`https://sportify-neon.vercel.app//singleclass/${params.id}`)
         },
         {
           path: "/dashboard/selectitem",
@@ -91,7 +94,7 @@ export  const router = createBrowserRouter([
         {
           path: "/dashboard/payment/:id",
           element: <Payment></Payment>,
-          loader: ({params})=>fetch(`http://localhost:5000/addtoclass/${params.id}`)
+          loader: ({params})=>fetch(`https://sportify-neon.vercel.app//addtoclass/${params.id}`)
         }
 
       ]

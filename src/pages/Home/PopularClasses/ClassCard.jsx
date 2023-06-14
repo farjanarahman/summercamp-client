@@ -15,7 +15,7 @@ const ClassCard = ({ data }) => {
         console.log(data);
         if (user && user.email) {
             const selectedCls = { name: user.displayName ,email: user.email, courseId: _id, course: name, image, Ins_name, available_seats, price }
-            fetch(`http://localhost:5000/selectcls`, {
+            fetch(`https://sportify-neon.vercel.app//selectcls`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

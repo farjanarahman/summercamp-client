@@ -14,7 +14,7 @@ const CheckoutForm = ({ price, data }) => {
   
 
   const { data: paymentData = [], refetch } = useQuery(["users"], async () => {
-    const res = await axios.post("http://localhost:5000/create-payment-intent", { price });
+    const res = await axios.post("https://sportify-neon.vercel.app//create-payment-intent", { price });
     return res.data.clientSecret;
   });
 
@@ -71,7 +71,7 @@ const CheckoutForm = ({ price, data }) => {
         instructorName: data.instructorName,
         instructorEmail: data.instructorEmail,
       };
-      axios.post("http://localhost:5000/payments", payment).then((res) => {
+      axios.post("https://sportify-neon.vercel.app//payments", payment).then((res) => {
         if (res.data) {
           alert("Payment Success");
         }

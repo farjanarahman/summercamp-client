@@ -14,7 +14,7 @@ const NewClass = () => {
           ...data,
           enrolledStudent: 0,
         };
-        fetch('http://localhost:5000/classes',{
+        fetch('https://sportify-neon.vercel.app//classes',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'

@@ -8,7 +8,7 @@ const MyClass = () => {
     console.log(user)
     const [classData, setClassData] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/classes/${user?.email}`)
+        fetch(`https://sportify-neon.vercel.app//classes/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
