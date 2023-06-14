@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
@@ -8,7 +8,7 @@ const PrivateRoutes = ({children}) => {
     const location=useLocation();
     console.log(location);
     if(loading){
-        return <Spinner animation="border" variant="success" />
+        return <progress className="progress w-56"></progress>
     }
     if(user){
         return children
