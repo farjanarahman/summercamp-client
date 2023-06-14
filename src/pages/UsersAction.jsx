@@ -6,7 +6,7 @@ const UsersAction = () => {
     const { data: userData = [], refetch } = useQuery(
         ["users"],
         async () => {
-            const res = await axios.get("https://sportify-neon.vercel.app//users");
+            const res = await axios.get("https://sportify-neon.vercel.app/users");
             return res.data;
         }
     );
@@ -14,7 +14,7 @@ const UsersAction = () => {
     const instructorHandler = (id) => {
         const ready = confirm("Are you sure you want to change roles?");
         if (ready) {
-            fetch(`https://sportify-neon.vercel.app//users/instructor/${id}`, {
+            fetch(`https://sportify-neon.vercel.app/users/instructor/${id}`, {
                 method: "PATCH"
             })
                 .then(res => res.json())
@@ -27,7 +27,7 @@ const UsersAction = () => {
     const adminHandler=(id) => {
         const ready = confirm("Are you sure you want to change roles?");
         if (ready) {
-            fetch(`https://sportify-neon.vercel.app//users/admin/${id}`, {
+            fetch(`https://sportify-neon.vercel.app/users/admin/${id}`, {
                 method: "PATCH"
             })
                 .then(res => res.json())

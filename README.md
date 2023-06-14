@@ -27,5 +27,6 @@
 13. react-router-dom
 14. react-tooltip
 15. sweetalert2
+16. framer motion
 
 ## Live site link: https://sportify-academy-6d048.web.app/

@@ -13,7 +13,7 @@ const PopularClasses2 = () => {
     return (
 
         <div>
-        <h1 className="text-center text-6xl text-blue-400 mt-2">Popular Classes</h1>
+       <h2 className='text-4xl text-center font-semibold mb-4 text-orange-600'>---Popular Classes---</h2>
         <hr className="w-1/3 mx-auto mt-4 bg-blue-400" />
         <div className="grid lg:grid-cols-3 gap-4 mt-4">
           {popularClass.map(popular => (

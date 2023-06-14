@@ -12,6 +12,9 @@ const useCart = () => {
      queryKey: ['carts', user?.email],
         enabled: !loading,
         queryFn: async () => {
+            if (!user){
+                return false;
+            }
             const res = await axiosSecure(`/selectcls?email=${user?.email}`)
             console.log('res from axios', res)
             return res.data;
