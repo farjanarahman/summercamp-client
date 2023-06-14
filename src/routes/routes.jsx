@@ -38,45 +38,63 @@ export  const router = createBrowserRouter([
             path: '/register',
             element: <RegisterForm></RegisterForm>
         },
+        {
+          path: "/classes",
+          element: <Classes></Classes>
+        },
+        {
+          path:"/instructor",
+          element: <ShowInstructor></ShowInstructor>
+        },
+        {
+          path: 'singleclass/:id',
+          element: <SingleClass></SingleClass>,
+          loader: ({params})=>fetch(`http://localhost:5000/classes/${params.id}`)
+        },
         
       ]
     },
+    
     {
-      path: 'dashboard',
-      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-      children: [
-      {
-        path: 'uHome',
-        element: <UHome></UHome>
-      },
-      {
-        path: 'manageUser',
-        element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-      },
-      {
-        path: 'manageClass',
-        element: <AdminRoute><ManageClass></ManageClass></AdminRoute>
-      },
-      {
-        path: 'addClass',
-        element: <AddClass></AddClass>
-      },
-      {
-        path: 'myClass',
-        element: <MyClass></MyClass>
-      },
-      {
-        path: 'updateClass',
-        element: <UpdateClass></UpdateClass>
-      },
-      {
-        path: 'myCourse',
-        element: <MyCourse></MyCourse>
-      },
-      {
-        path: 'payment/:id',
-        element: <Payment></Payment>
-      }
-    ]
+      path: "/dashboard",
+      element: <DashBoard></DashBoard>,
+      children:[
+        {
+          path: "/dashboard/instructor",
+          element: <Instructor></Instructor>
+        },
+        {
+          path: "/dashboard/class",
+          element: <NewClass></NewClass>
+        },
+        {
+          path: "/dashboard/action",
+          element:<UsersAction></UsersAction>
+        },
+        {
+          path: "/dashboard/allclass",
+          element: <AllClasses></AllClasses>
+        },
+        {
+          path: "/dashboard/myclass",
+          element: <MyClass></MyClass>
+        },
+        {
+          path: "/dashboard/updateclass/:id",
+          element: <UpdateMyClass></UpdateMyClass>,
+          //loader: ({params})=>fetch(`http://localhost:5000/singleclass/${params.id}`)
+        },
+        {
+          path: "/dashboard/selectitem",
+          element: <SelectItem></SelectItem>
+        },
+        {
+          path: "/dashboard/payment/:id",
+          element: <Payment></Payment>,
+          loader: ({params})=>fetch(`http://localhost:5000/addtoclass/${params.id}`)
+        }
+
+      ]
     }
   ]);
+  export default router;
