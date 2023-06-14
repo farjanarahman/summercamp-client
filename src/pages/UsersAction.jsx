@@ -27,7 +27,7 @@ const UsersAction = () => {
     const adminHandler=(id) => {
         const ready = confirm("Are you sure you want to change roles?");
         if (ready) {
-            fetch(`http://localhost:5000/users/admin/${id}`, {
+            fetch(`https://sportify-neon.vercel.app//users/admin/${id}`, {
                 method: "PATCH"
             })
                 .then(res => res.json())

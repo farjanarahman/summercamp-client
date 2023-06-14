@@ -28,4 +28,4 @@
 14. react-tooltip
 15. sweetalert2
 
-## Live site link: 
+## Live site link: https://sportify-academy-6d048.web.app/
