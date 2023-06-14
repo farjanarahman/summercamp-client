@@ -1,12 +1,12 @@
 import { Helmet } from 'react-helmet-async';
-import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { FaEdit } from 'react-icons/fa';
+import useAxios from '../../hooks/useAxios';
 
 
 const ManageClass = () => {
 
-    const [axiosSecure] = useAxiosSecure();
+    const [axiosSecure] = useAxios();
     const { data: instructor = [] } = useQuery(['instructor'], async () => {
         const res = await axiosSecure.get('/instructor')
         return res.data;
